@@ -4,6 +4,7 @@
 *.zip
 *.pb
 *.h5
+*.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
