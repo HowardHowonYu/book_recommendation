@@ -64,5 +64,10 @@ class Spider(scrapy.Spider):
             item['text'] = text  
         except:
             item['text'] = ''
+        
+        try:
+            item['tags'] = response.xpath('//*[@id="infoset_goodsCate"]/div[2]/dl/dd/ul/li[1]/a/text()').extract()[3]
+        except:
+            item['tags'] = response.xpath('//*[@id="infoset_goodsCate"]/div[2]/dl/dd/ul/li[1]/a/text()').extract()[2]
 
         yield item

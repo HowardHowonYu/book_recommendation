@@ -19,15 +19,16 @@ def db_connect():
 class Channels(DeclarativeBase):
     """Sqlalchemy deals model"""
 
-    __tablename__ = "bookcontents3"  # 테이블 이름
+    __tablename__ = "bookcontents4"  # 테이블 이름
 
     #컬럼 데이터 타입 작성
     id = Column(Integer, primary_key=True)
     title = Column(String(1000))
     img = Column(String(500))
-    text = Column(String(10000))
+    text = Column(String(5000))
     url = Column(String(500))
-    description = Column(String(10000))
+    description = Column(String(5000))
+    tags = Column(String(500))
 
     # def __init__(self,title,img,text,url):
     #     self.title = title

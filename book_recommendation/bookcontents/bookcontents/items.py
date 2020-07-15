@@ -15,3 +15,4 @@ class BookcontentsItem(scrapy.Item):
     text = scrapy.Field()
     url  = scrapy.Field()
     description = scrapy.Field()
+    tags = scrapy.Field()

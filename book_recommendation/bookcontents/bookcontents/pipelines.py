@@ -27,6 +27,7 @@ class BookcontentsPipeline(object):
             channels.text = item['text']
             channels.url = item['url']
             channels.description = item['description']
+            channels.tags = item['tags']
             
             self.session.add(channels)
             self.session.commit()
